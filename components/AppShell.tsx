@@ -42,7 +42,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       }
       if (current) {
         setActiveId(current.item.id);
-        setCrumb(current.item.label);
+        setCrumb(current.item.label as Parameters<typeof setCrumb>[0]);
       }
     };
 
