@@ -12,6 +12,10 @@ export const PALIERS_INTRO =
 export const PASSIFS_RULE =
   "**Règle des passifs :** aucun passif avant l’Ascension. Le passif s’acquiert en phases — phase 1 à l’Ascension, phase 2 à la Transcendance, complet au Maître. Un seul spell/objet créé, au Maître uniquement (sous slot), en fin de suivi.";
 
+/** Note « Animations », identique à chaque palier de chaque discipline. */
+export const ANIMATIONS_NOTE =
+  "Chaque étape donne lieu à une scène. Le MJ reste libre du contenu et de l’issue : une scène réussie fait progresser le palier, une scène ratée se rejoue. Les sorts ci-dessus et le contexte des trames servent de matière ; inutile de scripter les scènes à l’avance.";
+
 /** Malus par défaut si un prérequis n’est pas rempli à l’ouverture. */
 export const PREREQUIS_MALUS =
   "À CONFIRMER : proposition par défaut : dette d’XP de −50, le joueur démarre à −50 XP et doit atteindre 150 XP pour valider l’Initiation. Alternatives : plafond journalier réduit à 15 XP, ou blocage à la Révélation tant que le prérequis n’est pas comblé en RP";

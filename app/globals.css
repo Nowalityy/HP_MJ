@@ -825,14 +825,11 @@ ul.som-sub a:hover {
 .blk-valid {
   color: var(--gold);
 }
-.blk-reussite {
-  color: #2e6b3a;
-}
-.blk-echec {
-  color: #8b2e2e;
-}
 .blk-recomp {
   color: var(--gold);
+}
+.blk-anim {
+  color: var(--text-soft);
 }
 .blk-sorts {
   color: #6b3fa0;
@@ -868,15 +865,6 @@ ul.som-sub a:hover {
   color: var(--text-soft);
   font-family: var(--font-serif);
 }
-.variante .v-lab {
-  font-weight: 700;
-}
-.variante.reussite .v-lab {
-  color: #2e6b3a;
-}
-.variante.echec .v-lab {
-  color: #8b2e2e;
-}
 .reward-none {
   color: #8b2e2e;
   font-weight: 700;
@@ -907,6 +895,15 @@ ul.som-sub a:hover {
   padding: 6px 0 6px 18px;
   border-left: 2px solid var(--gold-bright);
   margin: 14px 0;
+}
+.anim-note {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--text-soft);
+  padding: 6px 0 6px 18px;
+  border-left: 2px solid var(--neutral-line);
+  margin: 8px 0 4px 0;
 }
 
 /* --- Navigation par liens hypertexte --- */

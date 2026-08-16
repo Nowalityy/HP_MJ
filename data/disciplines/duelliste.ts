@@ -49,26 +49,6 @@ export const duelliste: Discipline = {
         "Chaque étape a donné lieu à une scène jouée.",
         "Le MJ valide la compréhension des bases et l’exécution encadrée.",
       ],
-      reussites: [
-        {
-          label: "Exemple 1 —",
-          text: "Un instructeur (personnage MJ) fait réviser les gardes puis demande un sort de base ; le joueur applique ce qu’il vient d’apprendre.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "Duel d’entraînement à très faible enjeu où l’important est de tenir sa garde, pas de gagner.",
-        },
-      ],
-      echecs: [
-        {
-          label: "Exemple 1 —",
-          text: "Le joueur confond les gardes ou casse son enchaînement ; l’instructeur reprend la base — le palier attend.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "La théorie n’est pas assimilée, le joueur ne sait pas expliquer à quoi sert un désarmement.",
-        },
-      ],
       recompenses: [
         {
           badge: { kind: "none", text: "Pas de passif ni de spell à ce palier." },
@@ -112,26 +92,6 @@ export const duelliste: Discipline = {
         "Atteindre 200 XP cumulés.",
         "Chaque étape a donné lieu à une scène jouée.",
         "Le MJ constate que le joueur applique les bases seul, sans guidage.",
-      ],
-      reussites: [
-        {
-          label: "Exemple 1 —",
-          text: "Premier duel où le joueur gère seul son échange et place une feinte crédible.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "Face à plus fort, le joueur perd mais démontre qu’il applique ses bases en autonomie.",
-        },
-      ],
-      echecs: [
-        {
-          label: "Exemple 1 —",
-          text: "Privé de l’instructeur, le joueur se fige ou improvise mal — l’autonomie n’est pas là.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "La feinte est trop lisible et l’adversaire la punit.",
-        },
       ],
       recompenses: [
         {
@@ -177,26 +137,6 @@ export const duelliste: Discipline = {
         "Chaque étape a donné lieu à une scène jouée, dont l’apprentissage du passif (phase 1).",
         "Le MJ valide la maîtrise technique et l’acquisition de la phase 1 du passif.",
       ],
-      reussites: [
-        {
-          label: "Exemple 1 —",
-          text: "Exercice chaotique (plusieurs assaillants, terrain instable) où le joueur garde son sang-froid.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "Première activation réussie du passif en situation.",
-        },
-      ],
-      echecs: [
-        {
-          label: "Exemple 1 —",
-          text: "La pression prend le dessus, le Flux se dérobe et le sort avorte ou part de travers.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "Le passif mal contrôlé ne se déclenche pas ; la phase 1 n’est pas validée.",
-        },
-      ],
       recompenses: [
         {
           badge: { kind: "passif", text: "Passif — PHASE 1 :" },
@@ -235,26 +175,6 @@ export const duelliste: Discipline = {
         "Atteindre 400 XP cumulés.",
         "Chaque étape a donné lieu à une scène jouée, dont le Devoir de transmission.",
         "Passif phase 2 acquis ET Devoir de transmission mené (évènement + disciple(s) initié(s)).",
-      ],
-      reussites: [
-        {
-          label: "Exemple 1 —",
-          text: "Le joueur organise un tournoi ou une session ouverte, recrute des disciples et encadre leur première initiation.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "Démonstration d’une technique perfectionnée dépassant la simple maîtrise.",
-        },
-      ],
-      echecs: [
-        {
-          label: "Exemple 1 —",
-          text: "L’évènement de transmission tourne court — le Devoir n’est pas rempli.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "Sous la difficulté accrue, le passif phase 2 reste instable.",
-        },
       ],
       recompenses: [
         {
@@ -295,30 +215,6 @@ export const duelliste: Discipline = {
         "Atteindre 500 XP cumulés ET occuper l’un des slots de Maître du domaine.",
         "Chaque étape a donné lieu à une scène jouée.",
         "Avoir formé au moins un disciple jusqu’à la Transcendance et créé son spell/objet en fin de suivi.",
-      ],
-      reussites: [
-        {
-          label: "Exemple 1 —",
-          text: "Le joueur organise et arbitre un grand tournoi inter-maisons ; son autorité n’est plus contestée.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "Un disciple formé atteint la Transcendance.",
-        },
-        {
-          label: "Exemple 3 —",
-          text: "Révélation de son spell/objet signature en conditions réelles.",
-        },
-      ],
-      echecs: [
-        {
-          label: "Exemple 1 —",
-          text: "L’arbitrage dérape ou le joueur se montre partial ; son statut est remis en cause.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "La création finale est jugée déséquilibrée par le MJ — retour en conception.",
-        },
       ],
       recompenses: [
         {

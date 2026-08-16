@@ -1,4 +1,5 @@
 import type { Palier, Reward } from "@/data/types";
+import { ANIMATIONS_NOTE } from "@/data/shared";
 import { RichText } from "./RichText";
 import { BlockTitle } from "./BlockTitle";
 
@@ -72,27 +73,10 @@ export function PalierCard({
           ))}
         </ul>
 
-        <BlockTitle variant="reussite">
-          ▶ Animations de réussite (exemples)
-        </BlockTitle>
-        <ul className="suivi-list">
-          {palier.reussites.map((v, i) => (
-            <li key={i} className="variante reussite">
-              <span className="v-lab">{v.label}</span> <RichText text={v.text} />
-            </li>
-          ))}
-        </ul>
-
-        <BlockTitle variant="echec">
-          ✖ Animations d’échec (exemples)
-        </BlockTitle>
-        <ul className="suivi-list">
-          {palier.echecs.map((v, i) => (
-            <li key={i} className="variante echec">
-              <span className="v-lab">{v.label}</span> <RichText text={v.text} />
-            </li>
-          ))}
-        </ul>
+        <BlockTitle variant="anim">Animations</BlockTitle>
+        <p className="anim-note">
+          <RichText text={ANIMATIONS_NOTE} />
+        </p>
 
         <BlockTitle variant="recomp">Récompenses</BlockTitle>
         <ul className="suivi-list">

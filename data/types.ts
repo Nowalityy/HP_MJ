@@ -21,13 +21,6 @@ export interface Spell {
   desc: RichString;
 }
 
-/** Une variante d'animation (réussite ou échec). */
-export interface Variante {
-  /** Étiquette de tête, ex. « Exemple 1 — ». */
-  label: string;
-  text: RichString;
-}
-
 /** Type de récompense — pilote la couleur du badge de tête. */
 export type RewardKind = "none" | "passif" | "slot";
 
@@ -49,8 +42,6 @@ export interface Palier {
   etapes: RichString[];
   spells: Spell[];
   validation: RichString[];
-  reussites: Variante[];
-  echecs: Variante[];
   recompenses: Reward[];
 }
 

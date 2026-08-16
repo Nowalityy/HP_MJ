@@ -43,26 +43,6 @@ export const precision: Discipline = {
         "Chaque étape a donné lieu à une scène jouée.",
         "Le MJ valide la compréhension et la visée encadrée.",
       ],
-      reussites: [
-        {
-          label: "Exemple 1 —",
-          text: "Sous supervision, le joueur concentre un sort et touche une cible fixe au bon endroit.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "Exercice de densification où le joueur apprend à réduire son projectile sans le disperser.",
-        },
-      ],
-      echecs: [
-        {
-          label: "Exemple 1 —",
-          text: "Le projectile reste diffus et manque de force — retour à la théorie.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "La visée est approximative, le joueur touche à côté du point demandé.",
-        },
-      ],
       recompenses: [
         {
           badge: { kind: "none", text: "Pas de passif ni de spell à ce palier." },
@@ -99,26 +79,6 @@ export const precision: Discipline = {
         "Atteindre 200 XP cumulés.",
         "Chaque étape a donné lieu à une scène jouée.",
         "Le MJ constate que le joueur perce seul des défenses basiques.",
-      ],
-      reussites: [
-        {
-          label: "Exemple 1 —",
-          text: "Le joueur repère la faille d’un bouclier d’entraînement et le perce d’un tir précis.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "Face à une barrière renforcée, le joueur démontre qu’il vise juste même sans percer entièrement.",
-        },
-      ],
-      echecs: [
-        {
-          label: "Exemple 1 —",
-          text: "Le joueur frappe le bouclier de plein fouet au lieu de viser la faille — inefficace.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "La précision manque et le tir dévie.",
-        },
       ],
       recompenses: [
         {
@@ -159,26 +119,6 @@ export const precision: Discipline = {
         "Chaque étape a donné lieu à une scène jouée, dont l’apprentissage du passif (phase 1).",
         "Le MJ valide la maîtrise des trajectoires et la phase 1 du passif.",
       ],
-      reussites: [
-        {
-          label: "Exemple 1 —",
-          text: "Le joueur contourne un bouclier frontal d’un tir courbe et touche derrière.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "Première activation réussie du passif de perforation en situation.",
-        },
-      ],
-      echecs: [
-        {
-          label: "Exemple 1 —",
-          text: "La courbe est mal calculée et le tir s’écrase sur l’obstacle.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "Le passif mal contrôlé ne se déclenche pas ; la phase 1 n’est pas validée.",
-        },
-      ],
       recompenses: [
         {
           badge: { kind: "passif", text: "Passif — PHASE 1 :" },
@@ -217,26 +157,6 @@ export const precision: Discipline = {
         "Atteindre 400 XP cumulés.",
         "Chaque étape a donné lieu à une scène jouée, dont le Devoir de transmission.",
         "Passif phase 2 acquis ET Devoir de transmission mené.",
-      ],
-      reussites: [
-        {
-          label: "Exemple 1 —",
-          text: "Le joueur neutralise le catalyseur d’un adversaire sans le blesser, désamorçant le combat.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "Le joueur ouvre un stand de tir de précision et encadre ses premiers disciples.",
-        },
-      ],
-      echecs: [
-        {
-          label: "Exemple 1 —",
-          text: "Le tir manque le catalyseur et blesse le porteur — le contrôle fin n’est pas atteint.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "L’évènement de transmission tourne court — le Devoir n’est pas rempli.",
-        },
       ],
       recompenses: [
         {
@@ -277,30 +197,6 @@ export const precision: Discipline = {
         "Atteindre 500 XP cumulés ET occuper l’un des slots de Maître du domaine.",
         "Chaque étape a donné lieu à une scène jouée.",
         "Avoir formé au moins un disciple jusqu’à la Transcendance et créé son spell/objet en fin de suivi.",
-      ],
-      reussites: [
-        {
-          label: "Exemple 1 —",
-          text: "Le joueur perce un bouclier d’élite réputé infranchissable devant témoins.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "Un disciple formé atteint la Transcendance.",
-        },
-        {
-          label: "Exemple 3 —",
-          text: "Révélation de son tir signature en conditions réelles.",
-        },
-      ],
-      echecs: [
-        {
-          label: "Exemple 1 —",
-          text: "Le tir décisif échoue sous les regards ; le statut de référence est remis en cause.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "La création finale est jugée déséquilibrée par le MJ — retour en conception.",
-        },
       ],
       recompenses: [
         {

@@ -3,14 +3,7 @@ export function BlockTitle({
   variant,
   children,
 }: {
-  variant:
-    | "comp"
-    | "etape"
-    | "sorts"
-    | "valid"
-    | "reussite"
-    | "echec"
-    | "recomp";
+  variant: "comp" | "etape" | "sorts" | "valid" | "anim" | "recomp";
   children: React.ReactNode;
 }) {
   return (

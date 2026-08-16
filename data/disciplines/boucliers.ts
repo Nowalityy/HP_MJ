@@ -44,26 +44,6 @@ export const boucliers: Discipline = {
         "Chaque étape a donné lieu à une scène jouée.",
         "Le MJ valide la compréhension et la production encadrée d’un bouclier.",
       ],
-      reussites: [
-        {
-          label: "Exemple 1 —",
-          text: "Un instructeur envoie des sorts d’entraînement inoffensifs ; le joueur lève son bouclier au bon moment.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "Exercice de maintien où le joueur apprend à stabiliser sa barrière sans la laisser vaciller.",
-        },
-      ],
-      echecs: [
-        {
-          label: "Exemple 1 —",
-          text: "Le bouclier se forme trop tard ou se dissipe aussitôt ; l’instructeur reprend la théorie.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "Le joueur ne comprend pas la gestion du coût en Flux et s’épuise — le palier attend.",
-        },
-      ],
       recompenses: [
         {
           badge: { kind: "none", text: "Pas de passif ni de spell à ce palier." },
@@ -105,26 +85,6 @@ export const boucliers: Discipline = {
         "Atteindre 200 XP cumulés.",
         "Chaque étape a donné lieu à une scène jouée.",
         "Le MJ constate que le joueur érige seul des barrières adaptées.",
-      ],
-      reussites: [
-        {
-          label: "Exemple 1 —",
-          text: "Le joueur couvre seul un allié en dressant un mur au bon endroit.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "Face à des assauts venant de plusieurs directions, le joueur oriente correctement ses barrières.",
-        },
-      ],
-      echecs: [
-        {
-          label: "Exemple 1 —",
-          text: "La barrière est mal orientée et laisse passer le sort — l’autonomie n’est pas acquise.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "Le joueur épuise son Flux en multipliant les boucliers inutiles.",
-        },
       ],
       recompenses: [
         {
@@ -170,26 +130,6 @@ export const boucliers: Discipline = {
         "Chaque étape a donné lieu à une scène jouée, dont l’apprentissage du passif (phase 1).",
         "Le MJ valide la maîtrise de l’absorption/renvoi et la phase 1 du passif.",
       ],
-      reussites: [
-        {
-          label: "Exemple 1 —",
-          text: "Le joueur absorbe une salve légère et renvoie le sort suivant à son lanceur.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "Première activation réussie du passif défensif en situation.",
-        },
-      ],
-      echecs: [
-        {
-          label: "Exemple 1 —",
-          text: "Le renvoi rate et le sort passe la garde — la maîtrise n’est pas stable.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "Le passif mal contrôlé ne se déclenche pas ; la phase 1 n’est pas validée.",
-        },
-      ],
       recompenses: [
         {
           badge: { kind: "passif", text: "Passif — PHASE 1 :" },
@@ -228,26 +168,6 @@ export const boucliers: Discipline = {
         "Atteindre 400 XP cumulés.",
         "Chaque étape a donné lieu à une scène jouée, dont le Devoir de transmission.",
         "Passif phase 2 acquis ET Devoir de transmission mené.",
-      ],
-      reussites: [
-        {
-          label: "Exemple 1 —",
-          text: "Le joueur érige un dôme qui sauve un groupe d’alliés d’une salve dévastatrice.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "Le joueur ouvre une session d’entraînement défensif et encadre ses premiers disciples.",
-        },
-      ],
-      echecs: [
-        {
-          label: "Exemple 1 —",
-          text: "Le dôme cède sous la pression — le perfectionnement n’est pas atteint.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "L’évènement de transmission tourne court — le Devoir n’est pas rempli.",
-        },
       ],
       recompenses: [
         {
@@ -288,30 +208,6 @@ export const boucliers: Discipline = {
         "Atteindre 500 XP cumulés ET occuper l’un des slots de Maître du domaine.",
         "Chaque étape a donné lieu à une scène jouée.",
         "Avoir formé au moins un disciple jusqu’à la Transcendance et créé son spell/objet en fin de suivi.",
-      ],
-      reussites: [
-        {
-          label: "Exemple 1 —",
-          text: "Le joueur tient à lui seul une brèche pendant qu’on évacue des élèves — la référence en action.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "Un disciple formé atteint la Transcendance.",
-        },
-        {
-          label: "Exemple 3 —",
-          text: "Révélation de sa barrière/objet signature en conditions réelles.",
-        },
-      ],
-      echecs: [
-        {
-          label: "Exemple 1 —",
-          text: "La protection cède au pire moment ; le statut de référence est remis en cause.",
-        },
-        {
-          label: "Exemple 2 —",
-          text: "La création finale est jugée déséquilibrée par le MJ — retour en conception.",
-        },
       ],
       recompenses: [
         {
