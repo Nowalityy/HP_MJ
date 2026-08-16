@@ -10,7 +10,7 @@ export const DOC_META = {
   brandSub: "Système de suivi, édition MJ",
   crest: "Système de suivi · Elderwood",
   edition: "Édition de travail",
-  updated: "Mise à jour : 13 août 2026",
+  updated: "Mise à jour : 16 août 2026",
   coverTitle: "Pôle — Arts Offensifs & Défensifs",
   coverSubtitle:
     "Fiches de suivi de progression — Duelliste, Boucliers, Précision",

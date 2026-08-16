@@ -14,7 +14,7 @@ export const PASSIFS_RULE =
 
 /** Note « Animations », identique à chaque palier de chaque discipline. */
 export const ANIMATIONS_NOTE =
-  "Chaque étape donne lieu à une scène. Le MJ reste libre du contenu et de l’issue : une scène réussie fait progresser le palier, une scène ratée se rejoue. Les sorts ci-dessus et le contexte des trames servent de matière ; inutile de scripter les scènes à l’avance.";
+  "Chaque étape donne lieu à une scène. **Le MJ reste libre du contenu et de l’issue** : une scène réussie fait progresser le palier, une scène ratée se rejoue. Les sorts ci-dessus et le contexte des trames servent de matière ; inutile de scripter les scènes à l’avance.";
 
 /** Malus par défaut si un prérequis n’est pas rempli à l’ouverture. */
 export const PREREQUIS_MALUS =

@@ -829,7 +829,7 @@ ul.som-sub a:hover {
   color: var(--gold);
 }
 .blk-anim {
-  color: var(--text-soft);
+  color: var(--steel);
 }
 .blk-sorts {
   color: #6b3fa0;
@@ -897,13 +897,16 @@ ul.som-sub a:hover {
   margin: 14px 0;
 }
 .anim-note {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 15px;
+  font-size: 14.5px;
   color: var(--text-soft);
-  padding: 6px 0 6px 18px;
-  border-left: 2px solid var(--neutral-line);
-  margin: 8px 0 4px 0;
+  margin: 6px 0 4px 0;
+  padding: 10px 14px;
+  background: #fbf8f0;
+  border: 1px dashed var(--neutral-line);
+  border-radius: 3px;
+}
+.anim-note strong {
+  color: var(--steel);
 }
 
 /* --- Navigation par liens hypertexte --- */

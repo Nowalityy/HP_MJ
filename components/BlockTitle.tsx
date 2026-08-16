@@ -7,8 +7,8 @@ export function BlockTitle({
   children: React.ReactNode;
 }) {
   return (
-    <p className={`blk-title blk-${variant}`}>
+    <div className={`blk-title blk-${variant}`}>
       <span>{children}</span>
-    </p>
+    </div>
   );
 }
