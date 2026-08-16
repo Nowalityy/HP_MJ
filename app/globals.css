@@ -5,10 +5,10 @@
    text-gold, bg-parchment…) tout en gardant les tokens bruts ci-dessous.
    ========================================================================== */
 @theme {
-  --font-display: var(--font-cinzel), "Cinzel", serif;
-  --font-serif: var(--font-cormorant), "Cormorant Garamond", serif;
-  --font-body: var(--font-lora), "Lora", serif;
-  --font-mono: var(--font-plex-mono), "IBM Plex Mono", monospace;
+  --font-display: "Cinzel", serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-body: "Lora", serif;
+  --font-mono: "IBM Plex Mono", monospace;
 
   --color-ink: #17140f;
   --color-gold: #9c7726;
@@ -45,10 +45,10 @@
   --text-soft: #5b5544;
   --text-onink: #e9e2cf;
 
-  --font-display: var(--font-cinzel), "Cinzel", serif;
-  --font-serif: var(--font-cormorant), "Cormorant Garamond", serif;
-  --font-body: var(--font-lora), "Lora", serif;
-  --font-mono: var(--font-plex-mono), "IBM Plex Mono", monospace;
+  --font-display: "Cinzel", serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-body: "Lora", serif;
+  --font-mono: "IBM Plex Mono", monospace;
 
   --sidebar-w: 320px;
 }

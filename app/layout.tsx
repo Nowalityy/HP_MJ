@@ -1,41 +1,5 @@
 import type { Metadata } from "next";
-import {
-  Cinzel,
-  Cormorant_Garamond,
-  Lora,
-  IBM_Plex_Mono,
-} from "next/font/google";
 import "./globals.css";
-
-const cinzel = Cinzel({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-cinzel",
-  display: "swap",
-});
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-cormorant",
-  display: "swap",
-});
-
-const lora = Lora({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
-  variable: "--font-lora",
-  display: "swap",
-});
-
-const plexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-plex-mono",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Elderwood — Suivi Pôle 1 : Arts Offensifs & Défensifs",
@@ -49,10 +13,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="fr"
-      className={`${cinzel.variable} ${cormorant.variable} ${lora.variable} ${plexMono.variable}`}
-    >
+    <html lang="fr">
+      <head>
+        {/*
+          Polices chargées via Google Fonts au runtime (comme le document
+          d'origine). On évite ainsi next/font qui télécharge les polices
+          pendant le build — étape peu fiable sur les serveurs CI Netlify.
+        */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
