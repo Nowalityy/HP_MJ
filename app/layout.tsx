@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Elderwood — Suivi Pôle 1 : Arts Offensifs & Défensifs",
+  title: "Elderwood — Système de suivi de progression",
   description:
-    "Fiches de suivi de progression du pôle Arts Offensifs & Défensifs — Duelliste de Renom, Arts Défensifs & Boucliers, Magie de Précision & Perforation. Édition MJ.",
+    "Système de suivi de progression d'Elderwood. Choisissez un pôle magique pour accéder à ses disciplines et paliers.",
 };
 
 export default function RootLayout({

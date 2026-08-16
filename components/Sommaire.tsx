@@ -1,7 +1,7 @@
-import { disciplines } from "@/data";
+import type { Discipline } from "@/data/types";
 
-/** Table des matières du pôle. */
-export function Sommaire() {
+/** Table des matières d'un pôle. */
+export function Sommaire({ disciplines }: { disciplines: Discipline[] }) {
   return (
     <section id="sommaire" className="sommaire" aria-labelledby="sommaire-title">
       <div className="section-head">

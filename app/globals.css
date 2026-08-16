@@ -197,6 +197,20 @@ input:focus-visible {
   flex-direction: column;
   gap: 3px;
 }
+.sidebar-home {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #b9ae90;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.sidebar-home:hover {
+  color: var(--gold-bright);
+}
 
 .legend {
   margin: 18px 22px;
@@ -967,6 +981,198 @@ ul.som-sub a:hover {
 /* Ancres : décalage pour la topbar sticky. */
 [id] {
   scroll-margin-top: 70px;
+}
+
+/* ==========================================================================
+   Page d'accueil (sélection des pôles)
+   ========================================================================== */
+.landing-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.landing-hero {
+  text-align: center;
+  padding: 80px 20px 40px 20px;
+}
+.landing-hero .eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.landing-hero h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(40px, 7vw, 76px);
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  margin: 0 0 8px 0;
+  line-height: 1.05;
+}
+.landing-hero .tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(17px, 2.4vw, 22px);
+  color: var(--text-soft);
+  margin: 0 auto;
+  max-width: 640px;
+}
+.landing-hero .hero-rule {
+  width: 80px;
+  height: 2px;
+  background: var(--gold-bright);
+  margin: 28px auto 0 auto;
+}
+.landing-sub {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin: 0 0 50px 0;
+}
+.pole-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 26px;
+  padding-bottom: 80px;
+}
+.pole-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #fffdf7;
+  border: 1px solid var(--neutral-line);
+  border-radius: 6px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+  box-shadow: 0 1px 2px rgba(40, 30, 20, 0.04);
+}
+.pole-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(40, 30, 20, 0.14);
+  border-color: var(--card-accent);
+}
+.pole-card .card-top {
+  height: 6px;
+  background: linear-gradient(90deg, var(--card-accent), var(--card-accent2));
+}
+.pole-card .card-inner {
+  padding: 26px 26px 24px 26px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.pole-card .card-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.pole-card .card-glyph {
+  width: 52px;
+  height: 52px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--card-accent);
+  color: #fff;
+  font-size: 24px;
+  font-family: var(--font-display);
+}
+.pole-card .card-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+.pole-card h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.15;
+  color: var(--ink);
+  margin: 4px 0 0 0;
+  letter-spacing: 0.01em;
+}
+.pole-card .card-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--card-accent);
+  margin: 2px 0 14px 0;
+  font-weight: 500;
+}
+.pole-card .card-desc {
+  font-family: var(--font-serif);
+  font-size: 16.5px;
+  line-height: 1.5;
+  color: var(--text-main);
+  margin: 0 0 18px 0;
+}
+.pole-card .card-disc {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  border-top: 1px solid var(--neutral-line);
+  padding-top: 14px;
+}
+.pole-card .card-disc li {
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  color: var(--text-soft);
+  padding: 4px 0 4px 18px;
+  position: relative;
+}
+.pole-card .card-disc li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--card-accent);
+}
+.pole-card .card-cta {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--card-accent);
+  font-weight: 600;
+}
+.pole-card .card-cta .arrow {
+  transition: transform 0.16s ease;
+}
+.pole-card:hover .card-cta .arrow {
+  transform: translateX(4px);
+}
+.landing-foot {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--text-soft);
+  padding: 30px 0 50px 0;
+  border-top: 1px solid var(--neutral-line);
+}
+.landing-foot .maj {
+  display: block;
+  margin-top: 6px;
+  opacity: 0.8;
 }
 
 /* ==========================================================================

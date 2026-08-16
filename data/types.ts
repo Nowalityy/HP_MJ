@@ -65,3 +65,22 @@ export interface Discipline {
   paliers: Palier[];
   trame: Trame;
 }
+
+/** Un pôle magique : un groupe de disciplines + sa présentation. */
+export interface Pole {
+  /** Segment de route, ex. "pole-1". */
+  slug: string;
+  num: number;
+  /** Nom court du pôle (topbar, fil d'Ariane). */
+  poleName: string;
+  /** Titre de couverture, ex. « Pôle — Arts Offensifs & Défensifs ». */
+  coverTitle: string;
+  coverSubtitle: string;
+  disciplines: Discipline[];
+  /** Présentation sur la page d'accueil. */
+  glyph: string;
+  accent: string;
+  accent2: string;
+  tag: string;
+  description: string;
+}

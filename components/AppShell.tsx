@@ -2,31 +2,36 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Sidebar } from "./Sidebar";
-import { navItems } from "@/lib/nav";
-import { DOC_META } from "@/data";
+import type { NavItem } from "@/lib/nav";
 
 /**
- * Coquille applicative (client) : gère l’état interactif partagé —
+ * Coquille applicative (client) : gère l'état interactif partagé d'un pôle —
  * barre de progression, menu mobile, recherche et scrollspy.
  * Le contenu (server components) est passé via `children`.
  */
-export function AppShell({ children }: { children: React.ReactNode }) {
+export function AppShell({
+  navItems,
+  poleName,
+  children,
+}: {
+  navItems: NavItem[];
+  poleName: string;
+  children: React.ReactNode;
+}) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [activeId, setActiveId] = useState(navItems[0]?.id ?? "sommaire");
-  const [crumb, setCrumb] = useState(DOC_META.pole);
+  const [crumb, setCrumb] = useState(poleName);
   const progressRef = useRef<HTMLDivElement>(null);
 
   const closeSidebar = useCallback(() => setOpen(false), []);
 
-  // Barre de progression + scrollspy (actif + fil d’Ariane).
+  // Barre de progression + scrollspy (actif + fil d'Ariane).
   useEffect(() => {
     const sections = navItems
       .map((n) => document.getElementById(n.id))
       .map((el, i) => ({ el, item: navItems[i] }))
-      .filter((s): s is { el: HTMLElement; item: (typeof navItems)[number] } =>
-        s.el !== null,
-      );
+      .filter((s): s is { el: HTMLElement; item: NavItem } => s.el !== null);
 
     const onScroll = () => {
       const doc = document.documentElement;
@@ -42,7 +47,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       }
       if (current) {
         setActiveId(current.item.id);
-        setCrumb(current.item.label as Parameters<typeof setCrumb>[0]);
+        setCrumb(current.item.label);
       }
     };
 
@@ -53,7 +58,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
     };
-  }, []);
+  }, [navItems]);
 
   // Fermer le menu mobile avec Échap.
   useEffect(() => {
@@ -89,6 +94,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
       <div className="layout">
         <Sidebar
+          navItems={navItems}
           activeId={activeId}
           open={open}
           query={query}
@@ -98,7 +104,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
         <main className="main" id="main-content">
           <div className="topbar">
-            <span>{DOC_META.pole}</span>
+            <span>{poleName}</span>
             <span id="crumb-current">{crumb}</span>
           </div>
           {children}

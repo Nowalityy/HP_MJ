@@ -1,5 +1,6 @@
-import { DOC_META } from "@/data";
-import { navItems, type NavItem } from "@/lib/nav";
+import Link from "next/link";
+import { BRAND } from "@/data";
+import type { NavItem } from "@/lib/nav";
 
 function matchesQuery(item: NavItem, query: string): boolean {
   if (!query) return true;
@@ -15,12 +16,14 @@ function matchesQuery(item: NavItem, query: string): boolean {
 
 /** Barre latérale : identité, légende, recherche, sommaire navigable. */
 export function Sidebar({
+  navItems,
   activeId,
   open,
   query,
   onQueryChange,
   onNavigate,
 }: {
+  navItems: NavItem[];
   activeId: string;
   open: boolean;
   query: string;
@@ -30,12 +33,15 @@ export function Sidebar({
   return (
     <aside className={`sidebar${open ? " open" : ""}`} id="sidebar">
       <div className="sidebar-brand">
-        <div className="crest">{DOC_META.crest}</div>
-        <h1>{DOC_META.brand}</h1>
-        <p className="sub">{DOC_META.brandSub}</p>
+        <Link href="/" className="sidebar-home" onClick={onNavigate}>
+          ‹ Tous les pôles
+        </Link>
+        <div className="crest">{BRAND.crest}</div>
+        <h1>{BRAND.brand}</h1>
+        <p className="sub">{BRAND.brandSub}</p>
         <div className="meta">
-          <span>{DOC_META.edition}</span>
-          <span>{DOC_META.updated}</span>
+          <span>{BRAND.edition}</span>
+          <span>{BRAND.updated}</span>
         </div>
       </div>
 
@@ -85,9 +91,7 @@ export function Sidebar({
                     onClick={onNavigate}
                   >
                     <span
-                      className={`nav-num${
-                        item.num ? "" : " nav-num-dash"
-                      }`}
+                      className={`nav-num${item.num ? "" : " nav-num-dash"}`}
                     >
                       {item.num ?? "·"}
                     </span>

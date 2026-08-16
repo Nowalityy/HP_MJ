@@ -6,7 +6,6 @@ import {
   SYNTHESE_NOTE,
   TRAME_INTRO,
 } from "@/data/shared";
-import { DOC_META } from "@/data";
 import { RichText } from "./RichText";
 import { PalierCard } from "./PalierCard";
 import { SyntheseTable } from "./SyntheseTable";
@@ -14,8 +13,10 @@ import { SyntheseTable } from "./SyntheseTable";
 /** Section complète d’une discipline (lore, prérequis, paliers, synthèse, trame). */
 export function DisciplineSection({
   discipline,
+  poleName,
 }: {
   discipline: Discipline;
+  poleName: string;
 }) {
   const { slug, title, era, index, paliers, trame } = discipline;
 
@@ -30,7 +31,7 @@ export function DisciplineSection({
           <a href="#sommaire" className="back-top">
             ↑ Sommaire
           </a>{" "}
-          · {DOC_META.pole} ·{" "}
+          · {poleName} ·{" "}
           <span className={`era-chip era-chip-${era}`}>DISCIPLINE</span>
         </span>
         <h2 id={`${slug}-title`}>{title}</h2>
