@@ -1,49 +1,45 @@
 import { NextRequest, NextResponse } from "next/server";
+import { AUTH_COOKIE, computeToken } from "@/lib/auth";
 
 /**
- * Verrou d'accès (HTTP Basic Auth), exécuté à l'edge sur Netlify.
+ * Verrou d'accès, exécuté à l'edge sur Netlify.
  *
  * Le mot de passe n'est JAMAIS dans le code (le repo est public) : il est lu
- * depuis les variables d'environnement Netlify.
+ * depuis la variable d'environnement Netlify BASIC_AUTH_PASSWORD.
  *   - BASIC_AUTH_USER      (optionnel, défaut : "MjStaff")
  *   - BASIC_AUTH_PASSWORD  (le mot de passe ; défini sur Netlify)
  *
  * Tant que BASIC_AUTH_PASSWORD n'est pas défini, le site reste accessible
- * (aucun risque de se verrouiller dehors) — le verrou s'active dès que la
- * variable est renseignée sur Netlify.
+ * (aucun risque de se verrouiller dehors). Une fois défini, tout visiteur
+ * non authentifié est redirigé vers la page /login.
  */
 export const config = {
-  // Protège toutes les routes sauf les assets statiques.
   matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
 };
 
-export function middleware(req: NextRequest) {
-  const expectedUser = process.env.BASIC_AUTH_USER || "MjStaff";
+export async function middleware(req: NextRequest) {
   const expectedPass = process.env.BASIC_AUTH_PASSWORD;
 
   // Pas de mot de passe configuré → accès libre.
   if (!expectedPass) return NextResponse.next();
 
-  const header = req.headers.get("authorization");
-  if (header && header.startsWith("Basic ")) {
-    try {
-      const decoded = atob(header.slice(6));
-      const sep = decoded.indexOf(":");
-      const user = decoded.slice(0, sep);
-      const pass = decoded.slice(sep + 1);
-      if (user === expectedUser && pass === expectedPass) {
-        return NextResponse.next();
-      }
-    } catch {
-      // en-tête malformé → traité comme non authentifié
-    }
+  const { pathname } = req.nextUrl;
+
+  // Laisser passer la page de login et son endpoint.
+  if (pathname === "/login" || pathname.startsWith("/api/login")) {
+    return NextResponse.next();
   }
 
-  // Realm en ASCII uniquement (les en-têtes HTTP n'acceptent pas les accents).
-  return new NextResponse("Acces reserve - authentification requise.", {
-    status: 401,
-    headers: {
-      "WWW-Authenticate": 'Basic realm="Elderwood Staff"',
-    },
-  });
+  // Cookie de session valide → accès autorisé.
+  const cookie = req.cookies.get(AUTH_COOKIE)?.value;
+  const expectedToken = await computeToken(expectedPass);
+  if (cookie && cookie === expectedToken) {
+    return NextResponse.next();
+  }
+
+  // Sinon → redirection vers la page de login.
+  const url = req.nextUrl.clone();
+  url.pathname = "/login";
+  url.search = "";
+  return NextResponse.redirect(url);
 }
